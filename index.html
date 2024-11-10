@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./fonts/font.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Product</title>
+</head>
+<body>
+    <div class="container">
+        <div class="product">
+            <div class="info-product">
+                <h2>تی شرت نخی</h2>
+                <span>۴۹۹ هزار تومان</span>
+                <span class="offer">با ۳۰٪ تخفیف</span>
+                <p class="describe">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است چاپگرها و متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد</p>
+
+                <form>
+                    <div class="size-select">
+                        <p>سایزبندی:</p>
+                        <label for="small">
+                            <input type="radio" name="size" id="small">
+                            <span>S</span>
+                        </label>
+                        <label for="medium">
+                            <input type="radio" name="size" id="medium">
+                            <span>M</span>
+                        </label>
+                        <label for="large">
+                            <input type="radio" name="size" id="large">
+                            <span>L</span>
+                        </label>
+                        <label for="X-large">
+                            <input type="radio" name="size" id="X-large">
+                            <span>XL</span>
+                        </label>
+                        <label for="XX-large">
+                            <input type="radio" name="size" id="XX-large">
+                            <span>XXL</span>
+                        </label>
+                    </div>
+                    <div class="color-select">
+                        <p>رنگ بندی:</p>
+                        <label for="red">
+                            <input type="radio" name="color" id="red">
+                            <span class="color-1"></span>
+                        </label>
+                        <label for="blue">
+                            <input type="radio" name="color" id="blue">
+                            <span class="color-2"></span>
+                        </label>
+                        <label for="green">
+                            <input type="radio" name="color" id="green">
+                            <span class="color-3"></span>
+                        </label>
+                        <label for="black">
+                            <input type="radio" name="color" id="black">
+                            <span class="color-4"></span>
+                        </label>
+                    </div>
+
+                    <div class="order">
+                        <p>تعداد:</p>
+                        <input type="number" value="1">
+                    </div>
+
+                    <button class="btn">
+                        ثبت سفارش
+                    </button>
+                </form>
+            </div>
+            <div class="image-product">
+                <img src="./image1.png" id="product-img">
+                <div class="control">
+                    <span class="side"></span>
+                    <span class="side"></span>
+                    <span class="side"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let ImgProduct = document.querySelector('#product-img')
+        let btnSlide = document.querySelectorAll('.side')
+
+        btnSlide[0].onclick = function () {
+            ImgProduct.src = "./image1.png"
+            for(btn of btnSlide) {
+                btn.classList.remove('active')
+            }
+            this.classList.add('active')
+        }
+        btnSlide[1].onclick = function () {
+            ImgProduct.src = "./image2.png"
+            for(btn of btnSlide) {
+                btn.classList.remove('active')
+            }
+            this.classList.add('active')
+        }
+        btnSlide[2].onclick = function () {
+            ImgProduct.src = "./image3.png"
+            for(btn of btnSlide) {
+                btn.classList.remove('active')
+            }
+            this.classList.add('active')
+        }
+
+    </script>
+</body>
+</html>
